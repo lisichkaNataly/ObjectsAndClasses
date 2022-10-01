@@ -6,7 +6,21 @@ public class Main {
         Book bookRu = new Book("P.Sh.", 2017, authorRu);
         printBook(bookEn);
         bookEn.setYear(2022);
-        System.out.println("New book year: " + bookEn.getYear());
+        System.out.println("New year book: " + bookEn.getYear());
+
+        System.out.println("Методы. Домашнее задание");
+        Author authorEnCopy = new Author("Donald", "Trump");
+        Book bookEnCopy = new Book("The Way to the Top", 2020, authorEn);
+        System.out.println("Проверка метода toString: ");
+        System.out.println(authorEnCopy);
+        System.out.println(bookEnCopy);
+        System.out.println("Проверка метода equals: ");
+        System.out.println(bookEnCopy.equals(bookEn));
+        System.out.println(authorEnCopy.equals(authorEn));
+        System.out.println("Проверка метода hashCode: ");
+        System.out.println(bookEn.hashCode());
+        System.out.println(bookEnCopy.hashCode());
+
 
     }
 
