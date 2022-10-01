@@ -18,27 +18,21 @@ public class Author {
     }
 
     @Override
-    public String toString() {
-        return "Author name: " + this.name + " " + this.surname;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Author)) {
-            return false;
-        }
-        Author that = (Author) obj;
-        return this.name.equals(that.name) && this.surname.equals(that.surname);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return name.equals(author.name) && surname.equals(author.surname);
     }
 
     @Override
     public int hashCode() {
         return Objects.hash(name, surname);
     }
+
+    @Override
+    public String toString() {
+        return "Author name: " + this.name + " " + this.surname;
+    }
+
 }
